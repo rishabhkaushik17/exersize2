@@ -1,0 +1,56 @@
+Exersize 2
+Name : Rishabh Kaushik
+
+1. Create a repository and push to GitHub.
+    
+    git init
+    git remote add origin git@github.com:rishabhkaushik17/exersize2.git
+    git push origin master
+    
+2. Create two files in master branch, then create a tag 1.0.0 for first release from master.
+    
+    touch file1
+    touch file2
+    git add .
+    git commit -m "Added file1 file2"
+    git tag "v1.0.0" -a -m "First Release"
+    
+3. Now, perform some changes in previous files and create another tag 1.0.1.
+    
+    nano file1
+    nano file2
+    git add .
+    git commit -m "Changed file1 and file2"
+    git tag "v1.0.1" -a -m "This is changes in first release v1.0.0”
+    
+4. Now, create another file file3 and create a tag 1.1.0.
+    
+    touch file3
+    git add .
+    git commit -m "Added file3"
+    git tag "v1.1.0" -a -m "Added file 3 in v1.0.0”
+    
+5. Now in 1.0.1 release, do some changes in existing files and create another tag 1.0.2.
+    
+    git checkout v1.0.1
+    nano file1
+    nano file2
+    git add .
+    git commit -m "Modified file1 and file2 "
+    git tag "v1.0.2" -a -m "Modified v1.0.1”
+    
+6. Also do some changes in release 1.1.0, create a tag for next release 1.1.1.
+    
+    git checkout v1.1.0
+    touch file4
+    git add .
+    git commit -m "Added file4"
+    git log
+    git tag "v1.1.1" -a -m "Modified v1.1.0”
+    
+
+Pushing repository to GitHub
+
+git checkout master
+git push origin master
+git push --tags
